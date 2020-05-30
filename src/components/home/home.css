@@ -2,3 +2,11 @@
   width: 50%;
   text-align: center;
 }
+
+li {
+  border: 1px solid green;
+  padding: 5px;
+  text-align: center;
+  width: 200px;
+  height: 20px;
+}
