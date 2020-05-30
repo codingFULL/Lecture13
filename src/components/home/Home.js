@@ -14,6 +14,9 @@ function Home(props) {
         <li>
           <Link to="/signUp">{'Página de registro'}</Link>
         </li>
+        <li>
+          <Link to="/showUsers">{'Mostrar usuarios'}</Link>
+        </li>
       </ol>
     </div>
   );

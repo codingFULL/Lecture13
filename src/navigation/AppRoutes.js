@@ -9,6 +9,7 @@ import {
 
 import Home from '../components/home';
 import NotFound from '../components/notFound';
+import ShowUsers from '../components/showUsers';
 import SignIn from '../components/signIn';
 import SignUp from '../components/signUp';
 
@@ -20,6 +21,7 @@ function AppRoutes() {
         <Route exact={true} path="/SignUp" component={SignUp} />
         <Route exact={true} path="/SignIn" component={SignIn} />
         <Route exact={true} path="/notFound" component={NotFound} />
+        <Route exact={true} path="/showUsers" component={ShowUsers} />
         <Redirect to="/notFound" />
       </Switch>
     </Router>

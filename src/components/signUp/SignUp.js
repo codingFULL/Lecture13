@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function SignUp() {
+function SignUp(props) {
   const [textName, setTextName] = useState('');
   const [textLastName, setTextLastName] = useState('');
   const [textAge, setTextAge] = useState(0);
@@ -86,13 +86,23 @@ function SignUp() {
       if (textpassword !== textverifyPassword) {
         window.alert('Los campos de contraseña no coinciden');
       } else {
-        await axios.post('http://localhost:8080/user', {
-          name: textName,
-          lastName: textLastName,
-          age: textAge,
-          email: textEmail,
-          password: textpassword,
-        });
+        await axios.post(
+          'http://testlibertadores-env.eba-btratppm.us-east-2.elasticbeanstalk.com/user',
+          {
+            name: textName,
+            lastName: textLastName,
+            age: textAge,
+            email: textEmail,
+            password: textpassword,
+          }
+        );
+        const { history, location } = props;
+        const { from } = location.state || {
+          from: {
+            pathname: '/',
+          },
+        };
+        history.push(from);
       }
     }
   };
