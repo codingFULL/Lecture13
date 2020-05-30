@@ -16,7 +16,7 @@ function ShowUsers() {
     if (!statusFlag) {
       axios
         .get(
-          'http://testlibertadores-env.eba-btratppm.us-east-2.elasticbeanstalk.com/user'
+          'https://oq2fb3j51g.execute-api.us-east-2.amazonaws.com/dev/lib/user'
         )
         .then((response) => {
           console.log(response);

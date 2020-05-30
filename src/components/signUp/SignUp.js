@@ -87,7 +87,7 @@ function SignUp(props) {
         window.alert('Los campos de contraseña no coinciden');
       } else {
         await axios.post(
-          'http://testlibertadores-env.eba-btratppm.us-east-2.elasticbeanstalk.com/user',
+          'https://oq2fb3j51g.execute-api.us-east-2.amazonaws.com/dev/lib/user',
           {
             name: textName,
             lastName: textLastName,
